@@ -36,3 +36,4 @@ To run the project locally:
 3. Run **npm install** to install the project dependencies.
 4. Run **npm run dev** to start the frontend development server. Is should open up in 'http://localhost:5173/'
 5. Run unit tests using **npx vitest** from the root of the project.
+6. Run npx json-server src/mock/mock-data.json --port 3001 --middlewares src/mock/mock-api.js    --middlewares src/mock/mock-api.jsto start the backend development server.

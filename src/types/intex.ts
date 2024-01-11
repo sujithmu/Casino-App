@@ -1,15 +1,15 @@
-export type LoginResponse = {
+export type LoggedInResponse = {
   status: string;
-  player: LogedInUser;
+  player: LoggedInUser;
 };
 
-export type LogedInUser = {
+export type LoggedInUser = {
   name: string;
   avatar: string;
   event: string;
 };
 
-export type LogedInUserInfo = LogedInUser & {
+export type LoggedInUserInfo = LoggedInUser & {
   username: string;
 };
 

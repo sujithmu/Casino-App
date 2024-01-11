@@ -15,7 +15,7 @@ declare global {
 const PlayGame = () => {
   const navigate = useNavigate();
   const { code } = useParams();
-  const selectedGameURL = gameUrl(code);
+  const selectedGameURL = gameUrl(code as string);
 
   useEffect(() => {
     if (code && window.comeon && window.comeon.game) {

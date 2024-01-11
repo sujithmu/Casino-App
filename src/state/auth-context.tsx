@@ -1,9 +1,9 @@
 import React, { createContext, useState, ReactNode } from 'react';
-import { LogedInUserInfo } from '../types/intex';
+import { LoggedInUserInfo } from '../types/intex';
 
 interface AuthContextProps {
-  player: LogedInUserInfo;
-  setPlayer: React.Dispatch<React.SetStateAction<LogedInUserInfo>>;
+  player: LoggedInUserInfo;
+  setPlayer: React.Dispatch<React.SetStateAction<LoggedInUserInfo>>;
 }
 
 interface LoginProviderProps {
@@ -18,7 +18,7 @@ export const AuthContext = createContext<AuthContextProps>({
 });
 
 export const AuthProvider = ({ children }: LoginProviderProps) => {
-  const [player, setPlayer] = useState<LogedInUserInfo>(initialValue);
+  const [player, setPlayer] = useState<LoggedInUserInfo>(initialValue);
 
   return (
     <AuthContext.Provider value={{ player, setPlayer }}>

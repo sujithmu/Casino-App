@@ -1,6 +1,6 @@
-import { LogedInUser } from '../../types/intex';
+import { LoggedInUser } from '../../types/intex';
 
-const PlayerInfo: React.FC<LogedInUser> = ({ name, avatar, event }) => (
+const PlayerInfo: React.FC<LoggedInUser> = ({ name, avatar, event }) => (
   <div className='ui list'>
     <div className='player item'>
       <img className='ui avatar image' src={avatar} alt='avatar' />

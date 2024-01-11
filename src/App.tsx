@@ -5,7 +5,7 @@ import Logo from './assets/logo.svg';
 function App() {
   return (
     <>
-      <div className='ui one column center aligned page grid'>
+      <div className='ui one column center aligned page grid' style={{backgroundColor: "#be5252"}}>
         <div className='column twelve wide'>
           <img src={Logo} alt='logo' />
         </div>

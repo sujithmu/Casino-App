@@ -1,15 +1,13 @@
 import { useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import usePost from '../../hooks/usePost';
-import { LoginResponse } from '../../types/intex';
+import { LoggedInResponse } from '../../types/intex';
 import { AuthContext } from '../../state/auth-context';
 import useLoginForm from '../../hooks/useLoginForm';
 
 const Login = () => {
-  const { data, loading, error, post } = usePost<LoginResponse>('login');
-  const { formData, formErrors, handleInputChange, handleSubmit } =
-    useLoginForm(post);
-
+  const { data, loading, error, post } = usePost<LoggedInResponse>('login');
+  const { formData, formErrors, handleInputChange, handleSubmit } = useLoginForm(post);
   const navigate = useNavigate();
   const { setPlayer } = useContext(AuthContext);
 

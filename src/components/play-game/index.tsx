@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import gameUrl from '../../lib/helper/gameUrl';
 
 declare global {
   interface Window {
@@ -14,6 +15,7 @@ declare global {
 const PlayGame = () => {
   const navigate = useNavigate();
   const { code } = useParams();
+  const selectedGameURL = gameUrl(code);
 
   useEffect(() => {
     if (code && window.comeon && window.comeon.game) {
@@ -23,13 +25,15 @@ const PlayGame = () => {
 
   return (
     <div className='ui grid stackable'>
-      <div className='three wide column'>
+      <div className='twelve wide column'>
         <div className='ui secondary button' onClick={() => navigate(-1)}>
           <i className='left chevron icon'></i>Back
         </div>
-      </div>
-      <div className='twelve wide column'>
-        <div id='game-launch'></div>
+          <iframe
+              src={selectedGameURL}
+              className="w-full h-full" style={{height: "100%", width: "100%"}}
+            >
+          </iframe>
       </div>
     </div>
   );

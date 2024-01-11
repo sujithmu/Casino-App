@@ -1,30 +1,38 @@
-# React + TypeScript + Vite
+# Project Title - Casino-App
+This project is a responsive web application built with React and TypeScript. Using which users can login and play casino games.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## Technologies Used
+**React**: A JavaScript library for building user interfaces.
+**TypeScrip**t: A strict syntactical superset of JavaScript, adding optional static typing.
+**Vite**: Build tool that creates and loads react applications faster than CRA (Create React App).
+**Vitest**: Vitest is a JavaScript unit testing framework.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Structure
+This project is designed with a user-friendly interface and consists of several key components
 
-## Expanding the ESLint configuration
+1. **Login Page**: Is the entry point of the application. 
+2. **Games List page**: Screen where user can find complete list of games available. Users can search.
+3. **Games Page**: On Selecting a particular game users will be redirected to that selected games screen.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Key Features
+1. **Semantic UI**: Semantic UI React provides a way to compose React components through the as prop. It allows composing component features and props without adding extra nested components.
+2. **Reusable Components, Hooks**: The project is structured to promote reusability, with common functionality extracted into reusable components and hooks.
 
-- Configure the top-level `parserOptions` property like this:
+## Testing
+Unit testing is configure using **Vitest** which is a JavaScript unit testing framework.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+## Error Handling
+**Error Boundary**: This project uses Error Boundaries provided by React for better error handling. Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Performance Optimization
+**React.lazy**: This project uses React.lazy for code splitting by route. React.lazy function lets you render a dynamic import as a regular component. It helps to load components lazily as they are rendered, which can significantly improve performance in larger apps.
+
+## Running the Project Locally
+To run the project locally:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory in the terminal.
+3. Run **npm install** to install the project dependencies.
+4. Run **npm run dev** to start the frontend development server. Is should open up in 'http://localhost:5173/'
+5. Run unit tests using **npx vitest** from the root of the project.

@@ -10,7 +10,7 @@ const GameItem: React.FC<GameListResponse> = ({
   const navigate = useNavigate();
 
   return (
-    <div className='game item'>
+    <div className='gameList'>
       <div className='ui image'>
         <img src={icon} alt='game-icon' />
       </div>
